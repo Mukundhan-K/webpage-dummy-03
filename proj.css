@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+    height: 100%;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 
+
+header
+
+*/
+header{
+    color: white;
+    background-color: black;
+    padding: 5px 20px;
+    display: grid;
+    grid-template-rows: 30px 35px;
+}
+
+/* 
+
+top
+
+*/
+.top{
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+.left span.emoji{
+    margin-left: 30px;
+    color: red;
+}
+.right #rm{
+    display: flex;
+    gap: 30px;
+    margin-right: 10px;
+}
+
+/* 
+
+bottoom
+
+*/
+.bot{
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    font-weight: bold;
+    font-size: 1.5rem;
+    flex-basis: 200px;
+
+}
+.out{
+    margin-top: 3px;
+    width: 60%;
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(1fr);
+}
+.out li{
+    height: 39px;
+    cursor: pointer;
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+#op{
+    position: relative;
+}
+ul li ul{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: -1px;
+    border: 1px solid white;
+    display: none;
+}
+.out li:hover .drop1{
+    display: block;
+}
+.out li:hover{
+    background-color: red;
+}
+
+
+/* 
+
+
+header
+
+
+*/
+
+main{
+
+}
+#c{
+    height: 100vh;
+    border: 2px solid black;
+    display: grid;
+    place-content: center;
+}
+.corou{
+    width: 40vw;
+    border: 2px solid black;
+    overflow: hidden;
+}
+.outt{
+    width: 300%;
+    display: flex;
+    align-items: center;
+}
+.outt img{
+    width: 50%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    transition: all 0.2s linear;
+    /* margin-bottom: 40px; */
+}
+
+/* 
+
+hover
+
+*/
+
+input{
+    display: none;
+}
+.rad{
+    display: flex;
+    justify-content: center;
+}
+label{
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+label:hover{
+    background-color: red;
+}
+
+#bt1:checked ~ .img1{
+    margin-left: 0%;
+}
+#bt2:checked ~ .img1{
+    margin-left: -50%;
+}
+#bt3:checked ~ .img1{
+    margin-left: -100%;
+}
+
+
+/* 
+
+
+section flip
+
+
+*/
+
+.flip{
+    border: 1px solid black;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    grid-auto-flow: column;
+    gap: 20px;
+    grid-template-columns: repeat(1fr);
+}
+
+.card{
+    border: 1px solid black;
+    height: 250px;
+    width: 250px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    perspective: 200px;
+}
+.front{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    background-image: url(./flip_img/Screenshot\ 2023-07-21\ at\ 21-40-28\ Lord\ buddha\ graphic\ silhouette\ vector\ design\ with\ glowing\ mandala\ -\ Posters\ -\ myloview.png);
+    background-position: center;
+    background-size: cover;
+    backface-visibility: hidden;
+    background-color: blueviolet;
+}
+
+.back{
+    background-image: url(./flip_img/Screenshot\ 2023-07-21\ at\ 21-37-08\ Buddha\ mandala\ notebook\ -\ A3\ Poster\ -\ Frankly\ Wearing.png);
+    transform: rotateY(-180deg);
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    backface-visibility: hidden;
+
+    background-color: blueviolet;
+
+}
+
+.card:hover{
+    transform: rotateY(-180deg);
+}
